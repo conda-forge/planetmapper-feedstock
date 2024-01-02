@@ -1,5 +1,5 @@
 {% set name = "planetmapper" %}
-{% set version = "1.7.2" %}
+{% set version = "1.8.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/planetmapper-{{ version }}.tar.gz
-  sha256: fa1647de939d555824556f6d2de7ed0f913912ed6a3a178030dfe06518fdf390
+  sha256: 71f4f96ece1829edc71ff59a003759c6b39854a77600b67e40d964c5598ed35b
 
 build:
   noarch: python
