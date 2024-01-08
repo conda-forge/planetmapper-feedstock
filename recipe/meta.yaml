@@ -1,5 +1,5 @@
 {% set name = "planetmapper" %}
-{% set version = "1.8.5" %}
+{% set version = "1.8.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/planetmapper-{{ version }}.tar.gz
-  sha256: 71f4f96ece1829edc71ff59a003759c6b39854a77600b67e40d964c5598ed35b
+  sha256: 0cb11bd9dd6f7015c6c1c99d6e6cf55b7ea9ae14837227a4684dd979116b8f5c
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
   number: 0
   entry_points:
-    - planetmapper = planetmapper:main
+    - planetmapper = planetmapper.cli:main
 
 requirements:
   host:
@@ -38,6 +38,8 @@ test:
     - planetmapper
   commands:
     - pip check
+    - planetmapper --help
+    - planetmapper --version
   requires:
     - pip
 
