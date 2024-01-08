@@ -38,6 +38,8 @@ test:
     - planetmapper
   commands:
     - pip check
+    - planetmapper --help
+    - planetmapper --version
   requires:
     - pip
 
