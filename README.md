@@ -149,6 +149,3 @@ Feedstock Maintainers
 
 * [@ortk95](https://github.com/ortk95/)
 
-
-<!-- dummy commit to enable rerendering -->
-
