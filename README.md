@@ -7,7 +7,7 @@ Home: https://github.com/ortk95/planetmapper
 
 Package license: MIT
 
-Summary: PlanetMapper: A Python module for visualising, navigating and mapping Solar System observations
+Summary: PlanetMapper: A Python package for visualising, navigating and mapping Solar System observations
 
 Development: https://github.com/ortk95/planetmapper
 
