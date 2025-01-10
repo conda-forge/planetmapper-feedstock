@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "planetmapper" %}
 {% set version = "1.12.2" %}
 
@@ -6,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/planetmapper-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/planetmapper-{{ version }}.tar.gz
   sha256: 4916d811ad1f2c6dafb7d96fae01bf3ab281a82d6bd6c381e3df8c830fa02d15
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
   entry_points:
     - planetmapper = planetmapper.cli:main
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - astropy-base
     - matplotlib-base
     - numpy
@@ -43,6 +44,7 @@ test:
     - planetmapper --version
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/ortk95/planetmapper
