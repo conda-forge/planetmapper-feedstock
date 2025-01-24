@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "planetmapper" %}
-{% set version = "1.12.2" %}
+{% set version = "1.12.3" %}
 
 package:
   name: {{ name|lower }}
@@ -8,12 +8,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/planetmapper-{{ version }}.tar.gz
-  sha256: 4916d811ad1f2c6dafb7d96fae01bf3ab281a82d6bd6c381e3df8c830fa02d15
+  sha256: 32fd6b0ea7aa96e4b417b6b3764a2e6620bd2ee9566f8c9093d927289b2b5850
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
   entry_points:
     - planetmapper = planetmapper.cli:main
 
